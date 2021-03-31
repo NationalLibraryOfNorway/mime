@@ -18,7 +18,7 @@
     "start:elements": "yarn start --project=elements",
     "start:integration": "yarn start --port 8080 --prod --project=integration",
     "build": "ng build",
-    "prebuild:libs": "yarn install --check-files && yarn clean",
+    "prebuild:libs": "yarn install --check-files && yarn clean && yarn build --prod --project=ngx-mime",
     "build:libs": "ng-packagr -p libs/ngx-mime/ng-package.prod.json",
     "build:elements": "yarn build --prod --project elements --output-hashing none --single-bundle",
     "test": "ng test",
